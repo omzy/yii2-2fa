@@ -24,7 +24,7 @@ class LoginForm extends Model
     {
         return [
             // required fields
-            [['email', 'password'], 'required', 'on' => 'login'],
+            [['username', 'password'], 'required', 'on' => 'login'],
 
             // remember me boolean
             [['rememberMe'], 'boolean'],
@@ -33,7 +33,7 @@ class LoginForm extends Model
             ['password', 'validatePassword'],
 
             // valid email address
-            [['email'], 'email'],
+            [['username'], 'email'],
 
             // required field for 2fa
             [['authenticationCode'], 'required', 'on' => '2fa'],
